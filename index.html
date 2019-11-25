@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="string-1">Ядра в вёдра, выдру в тундру!</div>
+	<div id="string-2">Выдрав с выдры в тундре гетры</div>
+	<div id="string-3">В недрах тундры, выдры в гетрах </div>
+	<div id="string-4">Вытру гетрой выдре морду </div>
+	<div id="string-5">Тырят в вёдра ядра кедров!</div>
+	<div id="string-6">Вытру выдрой ядра кедров</div>
+	<script type="text/javascript">
+		let divs = document.getElementsByTagName('div')
+		for (let i=0; i<divs.length;i++){
+			console.log(divs[i].innerText)
+		}
+	</script>
+
+	<div class="element">Element 1</div>
+	<div class="element">Element 2</div>
+	<div class="element">Element 3</div>
+	<div class="element">Element 4</div>
+	<div class="element">Element 5</div>
+	<div class="element">Element 6</div>
+	<script type="text/javascript">
+		let divs2 = document.getElementsByClassName('element')
+		for (let i=0; i<3;i++){
+			divs2[i].style.color = 'red'
+		}
+		for (let i=3; i<6; i++){
+			divs2[i].style.color='green'
+		}
+	</script>
+
+	<div id="container"></div>
+	<script type="text/javascript">
+		let myDiv = document.getElementById('container')
+		for (let i=1; i<6;i++){
+			myDiv.innerHTML += '<div class="element">Element '+i+'</div>'	
+		}
+	</script>
+
+	<div id="container2"></div>
+	<input id="add-item-btn" type="button" value="+">
+	<script type="text/javascript">
+		let myDiv2 = document.getElementById('container2')
+		let button = document.getElementById('add-item-btn')
+		button.onclick = function() {
+			myDiv2.innerHTML += '<div class="element">Element</div>'
+		}
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
